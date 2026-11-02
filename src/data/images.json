@@ -1,0 +1,178 @@
+{
+  "snowflake": {
+    "src": "/images/snowflake.webp",
+    "width": 2400,
+    "height": 1584,
+    "subject": "Grand Seiko SBGA011 “Snowflake”",
+    "artist": "Faustine seiko",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Grand_Seiko_SBGA011.jpg",
+    "cropped": false
+  },
+  "calibre-9s65": {
+    "src": "/images/calibre-9s65.webp",
+    "width": 1600,
+    "height": 1768,
+    "subject": "Grand Seiko Caliber 9S65",
+    "artist": "STSPP",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Grand_Seiko_Caliber_9S65_Automatic.JPG",
+    "cropped": false
+  },
+  "speedmaster": {
+    "src": "/images/speedmaster.webp",
+    "width": 2000,
+    "height": 2667,
+    "subject": "Omega Speedmaster Professional",
+    "artist": "Daniel Zimmermann from Bayern, Deutschland (Germany)",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Classic_Speedy_(24067321725).jpg",
+    "cropped": false
+  },
+  "speedmaster-macro": {
+    "src": "/images/speedmaster-macro.webp",
+    "width": 2400,
+    "height": 1800,
+    "subject": "Speedmaster dial, close up",
+    "artist": "Daniel Zimmermann from Bayern, Deutschland (Germany)",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Omega_(23497183123).jpg",
+    "cropped": false
+  },
+  "speedmaster-back": {
+    "src": "/images/speedmaster-back.webp",
+    "width": 1800,
+    "height": 1350,
+    "subject": "Speedmaster caseback",
+    "artist": "Daniel Zimmermann from Bayern, Deutschland (Germany)",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Flight-Qualified_by_NASA_(23456599843).jpg",
+    "cropped": false
+  },
+  "seamaster": {
+    "src": "/images/seamaster.webp",
+    "width": 912,
+    "height": 1024,
+    "subject": "Omega Seamaster Co-Axial",
+    "artist": "Saptarshi2005",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Omega_Seamaster_Co-Axial.jpg",
+    "cropped": true
+  },
+  "aldrin": {
+    "src": "/images/aldrin.webp",
+    "width": 2400,
+    "height": 2415,
+    "subject": "Buzz Aldrin on the Moon, Apollo 11",
+    "artist": "Neil Armstrong",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Aldrin_Apollo_11_original.jpg",
+    "cropped": false
+  },
+  "apollo13": {
+    "src": "/images/apollo13.webp",
+    "width": 2000,
+    "height": 1992,
+    "subject": "Apollo 13 lunar module Aquarius",
+    "artist": "NASA",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Apollo_13_Lunar_Module_after_separation_from_CSM_(AS13-59-8562).jpg",
+    "cropped": false
+  },
+  "moon": {
+    "src": "/images/moon.webp",
+    "width": 1600,
+    "height": 1521,
+    "subject": "The full Moon",
+    "artist": "Gregory H. Revera",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:FullMoon2010.jpg",
+    "cropped": false
+  },
+  "ga2000": {
+    "src": "/images/ga2000.webp",
+    "width": 2000,
+    "height": 2503,
+    "subject": "G-Shock GA-2000 Carbon Core Guard",
+    "artist": "Maxquijano",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:G-Shock_GA-2000_Carbon_Core_Guard.jpg",
+    "cropped": false
+  },
+  "dw5000": {
+    "src": "/images/dw5000.webp",
+    "width": 1800,
+    "height": 1800,
+    "subject": "Casio G-Shock DW-5000",
+    "artist": "Stollenbaeck",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:DW-5000.jpg",
+    "cropped": false
+  },
+  "tourbillon": {
+    "src": "/images/tourbillon.webp",
+    "width": 2400,
+    "height": 1600,
+    "subject": "A tourbillon, close up",
+    "artist": "Guy Sie from Utrecht, Netherlands",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tourbillon_wheel_close-up_(3370466847).jpg",
+    "cropped": false
+  },
+  "breguet": {
+    "src": "/images/breguet.webp",
+    "width": 1800,
+    "height": 2916,
+    "subject": "Breguet’s original tourbillon drawing",
+    "artist": "Abraham-Louis Breguet",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Tourbillon,_original_drawing,_Abraham-Louis_Breguet.jpg",
+    "cropped": false
+  },
+  "rotor": {
+    "src": "/images/rotor.webp",
+    "width": 1920,
+    "height": 1440,
+    "subject": "An automatic calibre and its rotor",
+    "artist": "Unknown authorUnknown author",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:Mechanics_movement_feinmechanik_wrist_watch_clock_automatic_gmt_master_gmt-932709.jpg!d.jpg",
+    "cropped": false
+  },
+  "astron": {
+    "src": "/images/astron.webp",
+    "width": 1200,
+    "height": 1563,
+    "subject": "Seiko Quartz Astron",
+    "artist": "Deutsches-uhrenmuseum",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Seiko_Astron.jpg",
+    "cropped": false
+  },
+  "accutron": {
+    "src": "/images/accutron.webp",
+    "width": 2000,
+    "height": 1999,
+    "subject": "Bulova Accutron Spaceview, tuning-fork movement",
+    "artist": "名古屋太郎",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bulova_accutron_sv_1963.jpg",
+    "cropped": false
+  }
+}

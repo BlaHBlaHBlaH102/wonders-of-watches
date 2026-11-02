@@ -1,0 +1,35 @@
+/* Minion Pro: text and display italics */
+@font-face { font-family: Minion; src: url(/fonts/minion-Regular.woff2) format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: Minion; src: url(/fonts/minion-It.woff2) format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: Minion; src: url(/fonts/minion-Medium.woff2) format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: Minion; src: url(/fonts/minion-MediumIt.woff2) format('woff2'); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: Minion; src: url(/fonts/minion-SemiboldIt.woff2) format('woff2'); font-weight: 600; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Minion Cond'; src: url(/fonts/minion-BoldCn.woff2) format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Minion Cond'; src: url(/fonts/minion-BoldCnIt.woff2) format('woff2'); font-weight: 700; font-style: italic; font-display: swap; }
+
+/* Helvetica Neue: normal, from hairline upward */
+@font-face { font-family: Helv; src: url(/fonts/helv-Th.woff2) format('woff2'); font-weight: 100; font-display: swap; }
+@font-face { font-family: Helv; src: url(/fonts/helv-ThIt.woff2) format('woff2'); font-weight: 100; font-style: italic; font-display: swap; }
+@font-face { font-family: Helv; src: url(/fonts/helv-UltLt.woff2) format('woff2'); font-weight: 200; font-display: swap; }
+@font-face { font-family: Helv; src: url(/fonts/helv-Lt.woff2) format('woff2'); font-weight: 300; font-display: swap; }
+@font-face { font-family: Helv; src: url(/fonts/helv-Roman.woff2) format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: Helv; src: url(/fonts/helv-It.woff2) format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: Helv; src: url(/fonts/helv-Md.woff2) format('woff2'); font-weight: 500; font-display: swap; }
+
+/* Helvetica Neue: extended */
+@font-face { font-family: 'Helv Ex'; src: url(/fonts/helv-ThEx.woff2) format('woff2'); font-weight: 100; font-display: swap; }
+@font-face { font-family: 'Helv Ex'; src: url(/fonts/helv-UltLtEx.woff2) format('woff2'); font-weight: 200; font-display: swap; }
+@font-face { font-family: 'Helv Ex'; src: url(/fonts/helv-MdEx.woff2) format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Helv Ex'; src: url(/fonts/helv-BdEx.woff2) format('woff2'); font-weight: 700; font-display: swap; }
+
+/* Helvetica Neue: condensed */
+@font-face { font-family: 'Helv Cn'; src: url(/fonts/helv-ThCn.woff2) format('woff2'); font-weight: 100; font-display: swap; }
+@font-face { font-family: 'Helv Cn'; src: url(/fonts/helv-LtCn.woff2) format('woff2'); font-weight: 300; font-display: swap; }
+@font-face { font-family: 'Helv Cn'; src: url(/fonts/helv-Cn.woff2) format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Helv Cn'; src: url(/fonts/helv-MdCn.woff2) format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Helv Cn'; src: url(/fonts/helv-BdCn.woff2) format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Helv Cn'; src: url(/fonts/helv-XBlkCn.woff2) format('woff2'); font-weight: 950; font-display: swap; }
+
+/* DSEG7: digits only. The file holds no letters at all. */
+@font-face { font-family: Seg7; src: url(/fonts/DSEG7Classic-Regular.woff2) format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: Seg7; src: url(/fonts/DSEG7Classic-Bold.woff2) format('woff2'); font-weight: 700; font-display: swap; }

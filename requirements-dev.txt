@@ -1,0 +1,5 @@
+-r requirements.txt
+uvicorn>=0.30
+pytest>=8
+pillow>=10
+fonttools[woff]>=4.50
