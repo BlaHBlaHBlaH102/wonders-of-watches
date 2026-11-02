@@ -42,6 +42,28 @@ IMAGES = {
     "rotor": ("Mechanics movement feinmechanik wrist watch clock automatic gmt master gmt-932709.jpg!d.jpg", "An automatic calibre and its rotor", 1920, None),
     "astron": ("Seiko Astron.jpg", "Seiko Quartz Astron", 1200, None),
     "accutron": ("Bulova accutron sv 1963.jpg", "Bulova Accutron Spaceview, tuning-fork movement", 2000, None),
+    'gs-spacewalk': ('Seiko Spacewalk.JPG', 'Seiko Spring Drive Spacewalk chronograph', 1920, None),
+    'gs-5r86': ('Seiko Spring Drive 5R86 parts.jpg', 'Parts of the Spring Drive chronograph calibre 5R86', 1920, None),
+    'gs-gtr50': ('Grand Seiko Sport Collection Custom-Made Model featuring Nissan GT-R50 by Italdesign.jpg', 'Grand Seiko Sport Collection for the Nissan GT-R50', 1920, None),
+    'gs-sbgw231': ('Grand Seiko SBGW231 sideview.JPG', 'Grand Seiko SBGW231, side view', 1920, None),
+    'gs-sbgr051': ('Grand Seiko SBGR051 sideview.JPG', 'Grand Seiko SBGR051, side view', 1920, None),
+    'gs-sbgw005': ('Grand SeikoSBGW005 9S54-0030 01s3x.jpg', 'Grand Seiko SBGW005', 1920, None),
+    'gs-hibeat': ('Grand Seiko Automatic Hi-Beat.jpg', 'Grand Seiko Automatic Hi-Beat', 1920, None),
+    'gs-9s64': ('Grand Seiko Caliber 9S64 Hand-wound.jpg', 'Grand Seiko Caliber 9S64', 1920, None),
+    'gx-gs1300': ('CASIO G-SHOCK GS-1300B-1AJF 01.JPG', 'G-Shock GS-1300B', 1920, None),
+    'gx-5610': ('CASIO G-Shock GW-M5610U.jpg', 'G-Shock GW-M5610U', 1920, None),
+    'gx-mrg': ('Casio G-SHOCK MR-G The G MRG-7100BJ-1AJF02s5.jpg', 'G-Shock MR-G MRG-7100BJ', 1920, None),
+    'gx-9052': ('Casio G-Shock DW9052 - edit.jpg', 'G-Shock DW-9052', 1920, None),
+    'gx-ga100': ('Casio G-Shock GA-100, digital and analog watch (from 2010, photographed in 2023).jpg', 'G-Shock GA-100', 1920, None),
+    'gx-rangeman': ("Casio G-Shock GW-9400-1ER 'Rangeman' - triple sensor.jpg", 'G-Shock GW-9400 Rangeman', 1920, None),
+    'gx-shop': ('Casio G-Shock watches in a shop display in Germany (2023).jpg', 'A wall of G-Shocks', 1920, None),
+    'om-speedy': ('Speedmaster (23456608783).jpg', 'Omega Speedmaster Professional', 1920, None),
+    'om-dial': ('Moonwatch (24023224706).jpg', 'Speedmaster dial, close up', 1920, None),
+    'om-front': ('OMEGA-Speedmaster-Professional-Front.jpg', 'Omega Speedmaster Professional, front', 1920, None),
+    'om-side': ('Side view on Omega Speedmaster (cropped).jpg', 'Speedmaster, side view', 1920, None),
+    'om-sea60': ('Omega Seamaster ca. 1960.jpg', 'Omega Seamaster, about 1960', 1920, None),
+    'om-seamaster': ('Omega-Seamaster-p1020458.jpg', 'Omega Seamaster', 1920, None),
+    'rx-sub': ('Rolex Oyster Perpetual Date Submariner Watch.JPG', 'Rolex Oyster Perpetual Date Submariner', 1920, None),
 }
 
 
@@ -70,7 +92,7 @@ def main() -> None:
     for slug, (title, subject, max_w, crop) in IMAGES.items():
         query = urllib.parse.urlencode({
             "action": "query", "format": "json", "titles": f"File:{title}",
-            "prop": "imageinfo", "iiprop": "url|extmetadata",
+            "prop": "imageinfo", "iiprop": "url|extmetadata", "iiurlwidth": 1920,
         })
         data = json.loads(fetch(f"https://commons.wikimedia.org/w/api.php?{query}"))
         info = next(iter(data["query"]["pages"].values()))["imageinfo"][0]
@@ -80,14 +102,14 @@ def main() -> None:
         if target.exists():  # Resumable: Wikimedia throttles bulk original downloads.
             image = Image.open(target)
         else:
-            image = Image.open(io.BytesIO(fetch(info["url"]))).convert("RGB")
+            image = Image.open(io.BytesIO(fetch(info.get("thumburl") or info["url"]))).convert("RGB")
             if crop:
                 w, h = image.size
                 image = image.crop((int(crop[0] * w), int(crop[1] * h), int(crop[2] * w), int(crop[3] * h)))
             if image.width > max_w:
                 image = image.resize((max_w, round(image.height * max_w / image.width)), Image.LANCZOS)
             image.save(target, "WEBP", quality=82, method=6)
-            time.sleep(10)
+            time.sleep(1)
 
         credits[slug] = {
             "src": f"/images/{slug}.webp",

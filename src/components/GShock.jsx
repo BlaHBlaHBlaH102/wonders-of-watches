@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { pad, useFrame, useJson } from '../lib/hooks.js'
-import { Chapter, Photo, Segmented, Spec } from './Parts.jsx'
+import { Chapter, Gallery, Photo, Segmented, Spec } from './Parts.jsx'
 
 const DAYS = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
 
@@ -182,64 +182,6 @@ function DropTest() {
   )
 }
 
-/* ---------- Exploded Carbon Core Guard ---------- */
-
-const LAYERS = [
-  { key: 'bezel', label: 'Resin bezel', note: 'Takes the scrapes. Stands proud of the crystal.' },
-  { key: 'module', label: 'Module', note: 'Hands, LCD and quartz: the part everything else exists to protect.' },
-  { key: 'core', label: 'Carbon core case', note: 'Carbon-fibre-reinforced resin. Rigid enough to do the protecting alone, and it needs no separate button guards.' },
-  { key: 'back', label: 'Dual-layer back', note: 'A carbon-reinforced insert within the resin caseback.' },
-]
-
-function Exploded() {
-  const [spread, setSpread] = useState(62)
-  const [rot, setRot] = useState({ x: 58, z: -28 })
-  const [active, setActive] = useState('core')
-  const drag = useRef(null)
-
-  return (
-    <div className="exploded">
-      <div
-        className="exploded-stage"
-        onPointerDown={(e) => { drag.current = { x: e.clientX, y: e.clientY, startX: rot.x, startZ: rot.z }; e.currentTarget.setPointerCapture(e.pointerId) }}
-        onPointerMove={(e) => {
-          if (!drag.current) return
-          setRot({
-            x: Math.max(10, Math.min(80, drag.current.startX - (e.clientY - drag.current.y) * 0.4)),
-            z: drag.current.startZ + (e.clientX - drag.current.x) * 0.5,
-          })
-        }}
-        onPointerUp={() => { drag.current = null }}
-        role="img"
-        aria-label="Exploded view of a Carbon Core Guard watch. Drag to rotate."
-      >
-        <div className="exploded-stack" style={{ transform: `rotateX(${rot.x}deg) rotateZ(${rot.z}deg)` }}>
-          {LAYERS.map((layer, i) => (
-            <div key={layer.key} className={`layer layer-${layer.key} ${active === layer.key ? 'on' : ''}`} style={{ transform: `translateZ(${(1.5 - i) * spread * 1.4}px)` }} />
-          ))}
-        </div>
-        <div className="stage-hint">Drag to turn</div>
-      </div>
-      <div className="exploded-side">
-        <h3 className="sub-gx">Take it apart</h3>
-        <ul className="layer-list">
-          {LAYERS.map((layer) => (
-            <li key={layer.key} className={active === layer.key ? 'on' : ''}>
-              <button type="button" onClick={() => setActive(layer.key)}><b>{layer.label}</b></button>
-              {active === layer.key && <span>{layer.note}</span>}
-            </li>
-          ))}
-        </ul>
-        <label className="range">
-          <span className="control-label">Explode</span>
-          <input type="range" min="0" max="100" value={spread} aria-label="Separate the layers" onChange={(e) => setSpread(Number(e.target.value))} />
-        </label>
-        <p className="fineprint">A simplified diagram of the structure, not a parts diagram.</p>
-      </div>
-    </div>
-  )
-}
-
 export default function GShock() {
   const { data } = useJson('/api/sky')
   return (
@@ -260,12 +202,11 @@ export default function GShock() {
             <Spec label="Water" value="10" small=" bar" />
             <Spec label="Battery" value="10" small=" yr" />
           </div>
-          <Photo slug="dw5000" alt="A black Casio G-Shock DW-5000 with a square case and red inner ring" />
         </div>
       </div>
 
       <DropTest />
-      <Exploded />
+      <Gallery slugs={['gx-shop', 'dw5000', 'gx-5610', 'gx-mrg', 'gx-rangeman', 'gx-ga100', 'gx-9052', 'gx-gs1300']} />
 
       <div className="split photo-split">
         <div className="prose">

@@ -61,3 +61,11 @@ export function Segmented({ label, options, value, onChange }) {
     </div>
   )
 }
+
+export function Gallery({ slugs }) {
+  return (
+    <div className="gallery" tabIndex={0} role="group" aria-label="Photo gallery, scroll sideways">
+      {slugs.map((slug) => <Photo key={slug} slug={slug} />)}
+    </div>
+  )
+}
